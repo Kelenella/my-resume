@@ -1,3 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #f5f7fa;
@@ -6,29 +33,15 @@ body {
 .main_container {
   display: flex;
   flex-direction: row-reverse;
-  width: 100%;
-  background-color: #fff;
+  width: 1200px;
+  background-color: #f5f7fa;
   margin: 40px auto;
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
 }
-@media screen and (min-width: 480px) {
-  .main_container {
-    max-width: 480px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .main_container {
-    max-width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .main_ccontainer {
-    max-width: 1200px;
-  }
-}
+
 /* Main content section */
 .main_content_section {
-  padding: 50px 90px;
+  padding: 40px 90px;
 }
 .main_content_title {
   font-style: normal;
@@ -72,7 +85,7 @@ body {
 
 /* My projects section */
 .my_projects_section {
-  margin: 0 0 50px 0;
+  margin: 0 0 40px 0;
 }
 
 .my_projects_list {
@@ -84,6 +97,7 @@ body {
 }
 
 .my_projects_text {
+  width: 590px;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -117,8 +131,14 @@ body {
 /* My work experience section */
 .my_work_experience_company {
   color: #fb6d3a;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.my_work_experience_company:hover,
+.my_work_experience_company:focus {
+  color: #000000;
+}
 .my_work_experience_position {
   font-style: normal;
   font-weight: bold;
@@ -155,15 +175,12 @@ body {
   color: #000000;
 }
 
-.my_education_section {
-}
-
 /* Sidebar section */
 
 .sidebar_section {
   background-color: #25354d;
   width: 370px;
-  padding: 40px 0px;
+  padding: 30px 30px;
 }
 
 .contacts_section,
@@ -198,6 +215,13 @@ body {
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
+}
+.contacts_section_link:hover,
+.contacts_section_link:focus {
+  color: #fb6d3a;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Tech skills section */ /* Soft skills section */
